@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#784b00",
+                      "on-secondary-fixed": "#002113",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#b4c5ff",
+                      "on-tertiary-container": "#ffeedd",
+                      "on-secondary-container": "#00714d",
+                      "surface": "#f8f9ff",
+                      "on-primary-container": "#eeefff",
+                      "surface-dim": "#cbdbf5",
+                      "surface-bright": "#f8f9ff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "surface-container-highest": "#d3e4fe",
+                      "tertiary-fixed": "#ffddb8",
+                      "tertiary-container": "#996100",
+                      "background": "#f8f9ff",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#00174b",
+                      "on-error-container": "#93000a",
+                      "on-surface": "#0b1c30",
+                      "surface-container-high": "#dce9ff",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "primary": "#004ac6",
+                      "surface-container-low": "#eff4ff",
+                      "secondary-container": "#6cf8bb",
+                      "secondary-fixed": "#6ffbbe",
+                      "on-background": "#0b1c30",
+                      "outline-variant": "#c3c6d7",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "surface-tint": "#0053db",
+                      "on-surface-variant": "#434655",
+                      "outline": "#737686",
+                      "inverse-surface": "#213145",
+                      "secondary": "#006c49",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#4edea3",
+                      "primary-container": "#2563eb",
+                      "surface-container": "#e5eeff",
+                      "on-secondary-fixed-variant": "#005236",
+                      "on-tertiary-fixed": "#2a1700",
+                      "primary-fixed": "#dbe1ff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#d3e4fe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "1rem",
+                      "xs": "0.5rem",
+                      "gutter": "1.5rem",
+                      "lg": "2rem",
+                      "base": "4px",
+                      "md": "1.5rem",
+                      "margin": "2rem",
+                      "xl": "3rem"
+              },
+              "fontFamily": {
+                      "body-base": ["Manrope"],
+                      "label-bold": ["Manrope"],
+                      "body-sm": ["Manrope"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base">
+<!-- SideNavBar Shell -->
+<nav class="fixed left-0 top-0 h-screen w-[260px] bg-surface border-r border-outline-variant flex flex-col py-lg z-50">
+<div class="px-6 mb-xl">
+<div class="flex items-center gap-3">
+<img alt="Paws &amp; Cross Logo" class="w-10 h-10 object-contain" data-alt="A minimalist professional logo for a dog veterinary clinic, featuring a stylized dog silhouette merged with a subtle medical cross. The design uses a modern blue and green color palette on a clean white background, conveying trust and care. The flat vector illustration style is sophisticated and clean, perfectly representing a high-end medical facility for pets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeBU2rWXY5RNAiXS-hFVwXTVv3Dar18FL0kjdYO3AaWnga3sl2O2rLQurA3O41jdXQhfrt7YBSGcd7wbwYALsfQwxe1tYZf8tsmVI9vCYBiqMNMnO2hXhDv0FYHDbMjxXkjXHFSOVLSaK_-QmSmVq5AhwXwhO6ts92zNFW50vSMjqlfQogiNyvdPFDrepgVh5IbfZKtNHvfCfKRU46peKpYmbBaixonXEnLu-FQsMt6vHoEB9rJ00u3uOBBFOm3gcf2F3znvJtvLZJ"/>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary leading-tight">Paws &amp; Cross</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Veterinary Clinic</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1 overflow-y-auto px-4">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-lg" href="/dashboard">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-base text-body-base">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-lg" href="/patients">
+<span class="material-symbols-outlined">pets</span>
+<span class="font-body-base text-body-base">Patients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low transition-colors" href="/medical-records">
+<span class="material-symbols-outlined">description</span>
+<span class="font-body-base text-body-base">Medical Records</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-lg" href="/schedule">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-body-base text-body-base">Schedule</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-base text-body-base">Settings</span>
+</a>
+</div>
+<div class="px-4 pt-lg border-t border-outline-variant">
+<button class="w-full bg-primary text-on-primary py-3 px-4 rounded-lg flex items-center justify-center gap-2 font-label-bold text-label-bold active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+                Add New Patient
+            </button>
+</div>
+</nav>
+<!-- TopAppBar Shell -->
+<header class="flex justify-between items-center h-16 px-gutter ml-[260px] w-[calc(100%-260px)] sticky top-0 bg-surface border-b border-outline-variant z-40">
+<div class="flex items-center gap-4 w-1/2">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container border-none rounded-full py-2 pl-10 pr-4 text-body-sm focus:ring-2 focus:ring-primary/20" placeholder="Search medical records..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-all">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-all">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="h-8 w-px bg-outline-variant mx-2"></div>
+<div class="flex items-center gap-3 pl-2">
+<div class="text-right">
+<p class="font-label-bold text-label-bold text-on-surface">Dr. Sarah Wilson</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Lead Veterinarian</p>
+</div>
+<img alt="Veterinarian Profile" class="w-10 h-10 rounded-full border border-outline-variant" data-alt="A professional headshot of a friendly female veterinarian in a clean white medical coat with a stethoscope around her neck. The setting is a brightly lit, modern medical clinic with soft blue and white tones in the background. The lighting is flattering and high-key, emphasizing a welcoming and compassionate personality. The visual style is crisp and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsQHUyeJJvki93MuTALmnrrCHKz1eX0eAer0oXeFfl36ZTt6AIObDdQ7jaNkyPzkdW3Ng0naySLnt7LJPWaxvdqvkppMj2izB-0b8QHhOu6QZ0olXl68P9mGUHLgBWouCRkr26cHbOJeCBK3xae2votToCzbGYA3sT96Dc9MVcHCizFYcdLfCizLDVJUKxxdu8X8xm1nRFxCHhggdFCIscmkiuBQouMtzJq4OSaqIFak0j2nGB6lQilEq-PmOPlV4unJQGIbwgdF2E"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[260px] p-gutter min-h-screen">
+<!-- Patient Header Section -->
+<section class="bg-white rounded-xl border border-outline-variant p-6 mb-8 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-8">
+<div class="relative">
+<img alt="Max the Golden Retriever" class="w-32 h-32 rounded-2xl object-cover border-4 border-surface-container" data-alt="A close-up high-resolution portrait of a happy, healthy Golden Retriever named Max. The dog has a bright, intelligent expression and is sitting in a sunlit room with soft, warm lighting highlighting his golden coat. The background is a clean, minimalist veterinary clinic interior with soft blue and neutral tones. The mood is cheerful, welcoming, and highlights the dog's well-being." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT8phY05Z48dw4WJkbXz4_88HZV1eI1klKdiXdTH6BtqojR0Ou338NpV9mlaew5mMBmi5dPw5Yor1F3TR2JED-WgMq6Bqf0f7Vv16mtxITfLrz0Wu-aP-iAaEQmCJdQgDrtqtPbGMZjid3GiOarYd32tcD5eMTBIvnGGTTJPnxxTnWMvgnkrK70x0HjufLEugWu29Bw6a4o6pXnBFhZa3SjwIZoB1eCuu2WZi6BmtISNozvfEkMcwSkf0YGEX42fM2IhJNG3NwD3ox"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary text-on-secondary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-md">Stable</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-4">
+<h2 class="font-display-lg text-display-lg text-on-surface">Max</h2>
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-bold text-label-bold">Patient ID: #PC-9821</span>
+</div>
+<div class="flex gap-6 text-on-surface-variant font-body-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm">pets</span>
+                            Golden Retriever
+                        </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm">event</span>
+                            4 Years (Male)
+                        </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm">monitor_weight</span>
+                            32.5 kg
+                        </div>
+</div>
+<div class="flex gap-2 mt-2">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">Vaccinated</span>
+<span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-bold">Allergy: Penicillin</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container text-primary font-label-bold text-label-bold px-6 py-3 rounded-lg hover:bg-surface-container-high transition-colors">Edit Profile</button>
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-6 py-3 rounded-lg flex items-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">add_box</span>
+                    New Entry
+                </button>
+</div>
+</section>
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Side: Navigation & Timeline -->
+<div class="col-span-4 flex flex-col gap-6">
+<!-- Tabbed Navigation -->
+<div class="bg-white rounded-xl border border-outline-variant p-2 flex flex-col gap-1">
+<button class="flex items-center justify-between px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+                            Medical History
+                        </div>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="flex items-center justify-between px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">vaccines</span>
+                            Vaccinations
+                        </div>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="flex items-center justify-between px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">prescriptions</span>
+                            Prescriptions
+                        </div>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<button class="flex items-center justify-between px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">biotech</span>
+                            Lab Results
+                        </div>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Timeline of Visits -->
+<div class="bg-white rounded-xl border border-outline-variant flex flex-col shadow-sm h-[500px]">
+<div class="p-5 border-b border-outline-variant flex items-center justify-between">
+<h3 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Visit History</h3>
+<span class="material-symbols-outlined text-on-surface-variant">filter_list</span>
+</div>
+<div class="flex-1 overflow-y-auto p-4 flex flex-col gap-4 hide-scrollbar">
+<!-- Visit 1 -->
+<div class="p-4 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<p class="font-label-bold text-label-bold text-primary">OCT 24, 2023</p>
+<span class="bg-primary/10 text-primary px-2 py-0.5 rounded text-[10px] font-bold">ACTIVE</span>
+</div>
+<h4 class="font-body-base font-bold text-on-surface mb-1">Annual Wellness Checkup</h4>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">medical_services</span>
+                                Dr. Sarah Wilson
+                            </p>
+</div>
+<!-- Visit 2 -->
+<div class="p-4 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-2">
+<p class="font-label-bold text-label-bold text-on-surface-variant">AUG 12, 2023</p>
+</div>
+<h4 class="font-body-base font-bold text-on-surface mb-1">Skin Allergy Consultation</h4>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">medical_services</span>
+                                Dr. Mark Roberts
+                            </p>
+</div>
+<!-- Visit 3 -->
+<div class="p-4 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-2">
+<p class="font-label-bold text-label-bold text-on-surface-variant">MAY 05, 2023</p>
+</div>
+<h4 class="font-body-base font-bold text-on-surface mb-1">Dental Scaling &amp; Cleaning</h4>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">medical_services</span>
+                                Dr. Sarah Wilson
+                            </p>
+</div>
+<!-- Visit 4 -->
+<div class="p-4 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-2">
+<p class="font-label-bold text-label-bold text-on-surface-variant">JAN 20, 2023</p>
+</div>
+<h4 class="font-body-base font-bold text-on-surface mb-1">Minor Limping - Right Hind Leg</h4>
+<p class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">medical_services</span>
+                                Dr. Sarah Wilson
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Detailed Note Section -->
+<div class="col-span-8">
+<div class="bg-white rounded-xl border border-outline-variant flex flex-col shadow-sm h-full">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Visit Summary: Annual Wellness</h3>
+<p class="text-body-sm text-on-surface-variant">October 24, 2023 • Recorded by Dr. Sarah Wilson</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-lg border border-outline-variant transition-all">
+<span class="material-symbols-outlined">print</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-lg border border-outline-variant transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container text-primary font-label-bold rounded-lg border border-primary/20">
+<span class="material-symbols-outlined text-sm">edit</span>
+                                Edit Note
+                            </button>
+</div>
+</div>
+<!-- Rich Content Area -->
+<div class="p-8 overflow-y-auto">
+<div class="max-w-3xl space-y-10">
+<!-- Section: Clinical Observations -->
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">visibility</span>
+<h4 class="font-label-bold text-label-bold uppercase tracking-widest">Clinical Observations</h4>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border-l-4 border-primary">
+<p class="text-body-base text-on-surface leading-relaxed italic">
+                                        "Max appears bright, alert, and responsive. Coat is shiny with no evidence of ectoparasites. Cardiovascular exam shows normal sinus rhythm with no murmurs. Respiratory effort is normal and lungs are clear on auscultation. Abdomen is soft and non-painful on palpation."
+                                    </p>
+</div>
+</div>
+<!-- Section: Diagnosis -->
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+<h4 class="font-label-bold text-label-bold uppercase tracking-widest">Primary Diagnosis</h4>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 rounded-xl border border-outline-variant bg-white flex items-start gap-4">
+<div class="bg-green-100 p-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">General Healthy Status</p>
+<p class="text-xs text-on-surface-variant">ICD-10: Z00.1</p>
+</div>
+</div>
+<div class="p-4 rounded-xl border border-outline-variant bg-white flex items-start gap-4">
+<div class="bg-orange-100 p-2 rounded-lg">
+<span class="material-symbols-outlined text-orange-600">warning</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Early Dental Calculus</p>
+<p class="text-xs text-on-surface-variant">Grade 1 Gingivitis noted</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Treatment Plan -->
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">healing</span>
+<h4 class="font-label-bold text-label-bold uppercase tracking-widest">Treatment &amp; Recommendations</h4>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="text-primary font-bold text-xs">01</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Nutrition Adjustment</p>
+<p class="text-body-sm text-on-surface-variant">Recommend transitioning to a tartar-control diet to mitigate Grade 1 gingivitis progression. Supplement with dental chews twice weekly.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="text-primary font-bold text-xs">02</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Vaccination Schedule</p>
+<p class="text-body-sm text-on-surface-variant">Administered DHPP and Rabies boosters today. Next Bordetella vaccine due in 6 months.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="text-primary font-bold text-xs">03</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Follow-up</p>
+<p class="text-body-sm text-on-surface-variant">Re-evaluate dental health in 3 months. Schedule professional cleaning if calculus persists.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Attachments -->
+<div class="space-y-4 pb-12">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined">attach_file</span>
+<h4 class="font-label-bold text-label-bold uppercase tracking-widest">Digital Attachments</h4>
+</div>
+<div class="flex gap-4">
+<div class="w-40 aspect-square rounded-xl bg-surface-container border border-outline-variant flex flex-col items-center justify-center gap-2 group cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">image</span>
+<span class="text-[10px] font-bold text-on-surface-variant">DENTAL_XRAY.JPG</span>
+</div>
+<div class="w-40 aspect-square rounded-xl bg-surface-container border border-outline-variant flex flex-col items-center justify-center gap-2 group cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">description</span>
+<span class="text-[10px] font-bold text-on-surface-variant">BLOOD_WORK.PDF</span>
+</div>
+<button class="w-40 aspect-square rounded-xl border-2 border-dashed border-outline-variant flex flex-col items-center justify-center gap-2 text-on-surface-variant hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-[10px] font-bold">UPLOAD FILE</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

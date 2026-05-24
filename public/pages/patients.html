@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#784b00",
+                        "on-secondary-fixed": "#002113",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-container": "#ffeedd",
+                        "on-secondary-container": "#00714d",
+                        "surface": "#f8f9ff",
+                        "on-primary-container": "#eeefff",
+                        "surface-dim": "#cbdbf5",
+                        "surface-bright": "#f8f9ff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "surface-container-highest": "#d3e4fe",
+                        "tertiary-fixed": "#ffddb8",
+                        "tertiary-container": "#996100",
+                        "background": "#f8f9ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#00174b",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#0b1c30",
+                        "surface-container-high": "#dce9ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "primary": "#004ac6",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-container": "#6cf8bb",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-background": "#0b1c30",
+                        "outline-variant": "#c3c6d7",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-tint": "#0053db",
+                        "on-surface-variant": "#434655",
+                        "outline": "#737686",
+                        "inverse-surface": "#213145",
+                        "secondary": "#006c49",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "primary-container": "#2563eb",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-tertiary-fixed": "#2a1700",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#d3e4fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "1rem",
+                        "xs": "0.5rem",
+                        "gutter": "1.5rem",
+                        "lg": "2rem",
+                        "base": "4px",
+                        "md": "1.5rem",
+                        "margin": "2rem",
+                        "xl": "3rem"
+                    },
+                    "fontFamily": {
+                        "body-base": ["Manrope"],
+                        "label-bold": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background font-body-base text-on-background scrollbar-hide">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-screen w-[260px] bg-surface border-r border-outline-variant flex flex-col py-lg z-50">
+<div class="px-6 mb-10 flex items-center gap-3">
+<img alt="Paws &amp; Cross Logo" class="w-10 h-10 rounded-lg" data-alt="A minimalist professional logo for a high-end dog veterinary clinic called Paws and Cross. The design features a stylized dog silhouette merged with a subtle medical cross in a modern flat vector style. The color palette consists of trustworthy blues and calming greens set against a clean white background, conveying competence and warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeBU2rWXY5RNAiXS-hFVwXTVv3Dar18FL0kjdYO3AaWnga3sl2O2rLQurA3O41jdXQhfrt7YBSGcd7wbwYALsfQwxe1tYZf8tsmVI9vCYBiqMNMnO2hXhDv0FYHDbMjxXkjXHFSOVLSaK_-QmSmVq5AhwXwhO6ts92zNFW50vSMjqlfQogiNyvdPFDrepgVh5IbfZKtNHvfCfKRU46peKpYmbBaixonXEnLu-FQsMt6vHoEB9rJ00u3uOBBFOm3gcf2F3znvJtvLZJ"/>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary leading-tight">Paws &amp; Cross</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Veterinary Clinic</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150" href="/dashboard">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-base">Dashboard</span>
+</a>
+<!-- Patients is Active -->
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low transition-colors active:scale-95 duration-150" href="/patients">
+<span class="material-symbols-outlined" data-icon="pets" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-body-base">Patients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150" href="/medical-records">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-body-base">Medical Records</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150" href="/schedule">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-body-base">Schedule</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-base">Settings</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full bg-primary text-on-primary py-3 px-4 rounded-xl font-label-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                Add New Patient
+            </button>
+</div>
+</aside>
+<!-- Main Content Shell -->
+<div class="ml-[260px] min-h-screen flex flex-col">
+<!-- TopAppBar Anchor -->
+<header class="sticky top-0 z-40 bg-surface border-b border-outline-variant flex justify-between items-center h-16 px-gutter">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-body-sm focus:ring-2 focus:ring-primary/20 outline-none placeholder:text-on-surface-variant/60" placeholder="Search by dog name or owner..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-container rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chat_bubble">chat_bubble</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="help">help</span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant mx-2"></div>
+<div class="flex items-center gap-3 pl-2">
+<img alt="Veterinarian Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary/10" data-alt="A professional portrait of a compassionate female veterinarian in her late 30s. She is wearing a clean white medical coat over a soft blue shirt. The background is a blurred, high-end clinic setting with warm, soft lighting. Her expression is welcoming and confident, embodying the clinic's professional yet caring brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIkaXltKjx1lqvDzAsAP5li7puPdxEAWbFCg1-j5ZUcTaVElnIuYLkMzDTYGW5--9yPfnbJaabegnrReXzesU2SSo9ds9EVDzfxONUWlEo_GVNUTr4LDtkLANG0aBrQpPRq21IKKu1ZGVfXyXmidu3Bw_MaowF26IvceMhbi7nbyCLamglApW7i-zXxuefUvkBr5V_nrh1YzbJ1_ivOWm0Rp1JFBnbwu8-ebbJDyQon1f5O8FdekCSDFhgi49gOyi7HEcEe2-Mt-k1"/>
+<div class="hidden lg:block text-right">
+<p class="font-label-bold text-on-surface leading-none">Dr. Sarah Wilson</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider mt-1">Lead Veterinarian</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Canvas Content -->
+<main class="p-gutter flex-1">
+<div class="max-w-[1400px] mx-auto">
+<!-- Page Header & Filters -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<h2 class="font-headline-md text-display-lg text-on-surface tracking-tight">Patient Directory</h2>
+<p class="text-on-surface-variant font-body-base mt-1">Manage and monitor 124 active clinic patients.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex bg-surface-container-low p-1 rounded-lg border border-outline-variant">
+<button class="px-4 py-2 text-body-sm bg-white shadow-sm rounded-md text-primary font-bold">All Pets</button>
+<button class="px-4 py-2 text-body-sm text-on-surface-variant hover:bg-surface-container transition-colors rounded-md">In Clinic</button>
+<button class="px-4 py-2 text-body-sm text-on-surface-variant hover:bg-surface-container transition-colors rounded-md">Urgent</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2.5 border border-outline-variant rounded-xl text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="filter_list">filter_list</span>
+<span class="font-label-bold">Breed</span>
+</button>
+</div>
+</div>
+<!-- Patient Grid - Asymmetric Pattern -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Patient Card 1 -->
+<div class="bg-white border border-outline-variant rounded-[20px] p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group">
+<div class="flex items-start justify-between mb-4">
+<div class="relative">
+<img alt="Cooper - Golden Retriever" class="w-20 h-20 rounded-2xl object-cover" data-alt="A high-resolution, close-up photograph of a friendly Golden Retriever named Cooper. The dog has a shiny, honey-colored coat and soft, expressive brown eyes. It is sitting in a bright, modern room with natural sunlight filtering through, creating a warm and comforting atmosphere. The aesthetic is clean and professional, matching the clinic's premium medical branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmFPR62rERhXIQUmZtMChH3R0jMJY5AbzIvAV6flBdH3uJu41X5t24SdDmPCG8EkjccIEWLuy4_Zr0G-559t10lpmRI8DBMPdfg2iB4B7TouOc0Y3JzePRf32xN-w8S1-L46EIKQw-18tHxRvzwWxXgJWgbquTkoJ_7AJ3xcCZU97FeuA8mfWlp-24K5OoSJFR1n04S7y-LXRoleQtqJu9a9SepmNN-6g215bF0KTkSZeeSgvAje7ReuhskBaOcgUXXlEHGxOrC48S"/>
+<div class="absolute -bottom-1 -right-1 bg-secondary-container text-on-secondary-container w-6 h-6 rounded-full flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-[11px] font-label-bold uppercase">Up to date</div>
+</div>
+<div class="mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Cooper</h3>
+<p class="text-on-surface-variant font-body-sm">Golden Retriever • 3 years</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/40 pt-4">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Owner</p>
+<p class="font-body-sm font-bold">John Miller</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Last Visit</p>
+<p class="font-body-sm">12 Oct 2023</p>
+</div>
+</div>
+</div>
+<!-- Patient Card 2 -->
+<div class="bg-white border border-outline-variant rounded-[20px] p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group">
+<div class="flex items-start justify-between mb-4">
+<div class="relative">
+<img alt="Bella - Beagle" class="w-20 h-20 rounded-2xl object-cover" data-alt="A professional studio portrait of a Beagle named Bella against a soft pastel backdrop. The dog has classic tricolor markings and large, soulful ears. The lighting is balanced and soft, emphasizing the texture of its fur. The overall visual style is minimalist and high-end, evoking a sense of clinical excellence mixed with genuine pet-focused compassion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ9yqW25hpGX7rTC32ZuC4jXe_0qbLwyNwdWlRJd_cnSMXGJnSsmBVCE4IlhA56xzHMiGi7-ZKEltXwZZxonMVur2n_tuD6ALVXd14TOKaJerwa2SeNgnVpJTBgx4Os0MzgCLP02ZUT5CTnYPeZT_zwHWlZrIA3JpNGOiAlzk40ck-u3u0IiM_89Rx4xa_kkn9lAQUagvAgcG1r-oHXBWRgS8122xfKwaImqomIXNvudZGTnAj_s6ZgsCB_KL2rLtxLCn91hBOp9YD"/>
+</div>
+<div class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-[11px] font-label-bold uppercase">Urgent Care</div>
+</div>
+<div class="mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Bella</h3>
+<p class="text-on-surface-variant font-body-sm">Beagle • 5 years</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/40 pt-4">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Owner</p>
+<p class="font-body-sm font-bold">Sarah Jenkins</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Last Visit</p>
+<p class="font-body-sm">Today</p>
+</div>
+</div>
+</div>
+<!-- Patient Card 3 -->
+<div class="bg-white border border-outline-variant rounded-[20px] p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group">
+<div class="flex items-start justify-between mb-4">
+<div class="relative">
+<img alt="Max - Frenchie" class="w-20 h-20 rounded-2xl object-cover" data-alt="A charming portrait of a French Bulldog named Max sitting on a clean, light-colored surface. The dog's expressive face and large bat-like ears are the focal point. The background is a soft, out-of-focus white clinic wall, suggesting a professional medical environment. The color tones are bright and airy, following a modern corporate aesthetic with soft minimalist touches." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5doCpsEkMEFO_UXFwMAEWa_j8KFD4JafNO3UiU7oxbjHvQskJAGAIJ6ESIMGv6KhmttrG16-3cTcvcWT8vuuNN0_wyi51BmoGgGV5dNeXu_v3IJfywMc0LUfWVhaMLV8rI0txwuHBYjuiCQ7kKMxzTYD_RlW_SdQMTIIM41Hfl4VWH5BEuMsuYBD-xNC75WF1avYrEd-BSrPNT9DyTzFQjXObOEow4r-HdyJLnWnYwCOJ3FNFnGS3GOY8a0mqOLw-a4XRUEBQ6qtn"/>
+</div>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-full text-[11px] font-label-bold uppercase">Pending Vax</div>
+</div>
+<div class="mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Max</h3>
+<p class="text-on-surface-variant font-body-sm">French Bulldog • 1 year</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/40 pt-4">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Owner</p>
+<p class="font-body-sm font-bold">David Chen</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Last Visit</p>
+<p class="font-body-sm">05 Nov 2023</p>
+</div>
+</div>
+</div>
+<!-- Patient Card 4 -->
+<div class="bg-white border border-outline-variant rounded-[20px] p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group">
+<div class="flex items-start justify-between mb-4">
+<div class="relative">
+<img alt="Luna - Poodle" class="w-20 h-20 rounded-2xl object-cover" data-alt="A clean and artistic shot of a white Toy Poodle named Luna, looking attentively at the camera. The dog is groomed perfectly, reflecting the high standards of the Paws and Cross clinic. The image is bathed in soft, natural morning light, creating gentle shadows and highlights on its curly fur. The style is sophisticated and elegant, emphasizing the clinic's premium care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBM_oTzRLjdFrmn3imD-BgSLcx0bqC3TJFmfnCaUDoobcPQU0fOXyjdqOB6tRg7mBqy5E2eTf-tK2vpA4QcC96l2NbdKOZU9XB_b9nr_N_tQXgMplS53nGyD2nyNSp7FGUYvYqhs5GC5YaJFU0YLpxVwU-ILSvfwtWoPUtwngeRkjTkrSEfFBUPmD-MLPUzo_ZLjc3coGHVRNB-thHiyc3JbFS0D2WBfycHY-pmYbcngcWYKYj7NcvCZCSzgjlRknd_Au8zJgFAMdO"/>
+</div>
+<div class="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-[11px] font-label-bold uppercase">Up to date</div>
+</div>
+<div class="mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Luna</h3>
+<p class="text-on-surface-variant font-body-sm">Standard Poodle • 2 years</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/40 pt-4">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Owner</p>
+<p class="font-body-sm font-bold">Emily White</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Last Visit</p>
+<p class="font-body-sm">18 Sep 2023</p>
+</div>
+</div>
+</div>
+<!-- Patient Card 5 -->
+<div class="bg-white border border-outline-variant rounded-[20px] p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group">
+<div class="flex items-start justify-between mb-4">
+<div class="relative">
+<img alt="Rocky - German Shepherd" class="w-20 h-20 rounded-2xl object-cover" data-alt="A powerful and majestic German Shepherd named Rocky, photographed in a well-lit medical consultation room. The dog is standing calmly, showing its strength and noble features. The clinic interior in the background is minimalist, with light wood accents and clinical white surfaces. The lighting is crisp and bright, reinforcing the professional medical context of the directory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUMVcihV0AI5M7m5Sp_MSz3oDBOkSKtfWdb9NM-S1pguEIgTZ9IETRF5FQocfSB6bjssjeeiM18YEikPuEyUH6QvzgIH5nZjG4Y5DD7fpeabvCq45ydejS0gxn4ZLRJxMng3Nsaql6MlTRx2p0fgjvMcS0IEtk9oS11eYs0stFSxnhIsFJxzUBPhpc7Dj6yU4TQXuhrNhP2kkpMk-Yf7zhSPWgUkfAKHT9ZPen40sf_DDplQJjgdegerrLtRDxm8hu4htYxbRQw8Y7"/>
+</div>
+<div class="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-[11px] font-label-bold uppercase">Up to date</div>
+</div>
+<div class="mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Rocky</h3>
+<p class="text-on-surface-variant font-body-sm">German Shepherd • 4 years</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/40 pt-4">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Owner</p>
+<p class="font-body-sm font-bold">Mike Harrison</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Last Visit</p>
+<p class="font-body-sm">22 Oct 2023</p>
+</div>
+</div>
+</div>
+<!-- Patient Card 6 -->
+<div class="bg-white border border-outline-variant rounded-[20px] p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group">
+<div class="flex items-start justify-between mb-4">
+<div class="relative">
+<img alt="Daisy - Corgi" class="w-20 h-20 rounded-2xl object-cover" data-alt="A delightful Welsh Corgi named Daisy looking up with a cheerful expression. The dog is positioned in a modern clinic environment that feels warm and non-threatening. The photography uses a shallow depth of field, keeping the focus entirely on the dog's lively features while the medical equipment in the background is softly blurred. The lighting is high-key and optimistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbT9DFCslU5mM-bOKZk8EjEduiNgcqghQOP5jnaBH8oTUxFUbfnoIuw__69yvERjIPtSD7yJ-Y0iPdd5WrJuGz8nGEA_PHUbN3nWFshYlYIjJLZuTAPPpzh-1Q5jpM7XFMyPVyPAWbLcKoPo15sKWzFwG7q1yPqjVwtfC1agCK9fbCT8jFbn25FmgRK49Lqz_0WHh6H_V0YdtDqCa-gwmHcbykVtkBMykkT6jL8F2jnXGEpeJN5Nwi3QPbHbeJzwap4gO8rdko-Wjs"/>
+</div>
+<div class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-[11px] font-label-bold uppercase">Post-Op</div>
+</div>
+<div class="mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Daisy</h3>
+<p class="text-on-surface-variant font-body-sm">Welsh Corgi • 2 years</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/40 pt-4">
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Owner</p>
+<p class="font-body-sm font-bold">Alice Brown</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label-bold mb-1">Last Visit</p>
+<p class="font-body-sm">Yesterday</p>
+</div>
+</div>
+</div>
+<!-- Add Patient Card Ghost State -->
+<div class="border-2 border-dashed border-outline-variant rounded-[20px] p-5 flex flex-col items-center justify-center text-center group cursor-pointer hover:border-primary/50 transition-all duration-300 bg-surface-container-low/50">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="add">add</span>
+</div>
+<p class="font-label-bold text-on-surface-variant">Add New Patient</p>
+<p class="text-xs text-on-surface-variant/60 mt-1 max-w-[150px]">Register a new pet to the clinic database</p>
+</div>
+</div>
+<!-- Treatment Plan Progress (Playful Component) -->
+<div class="mt-12 bg-white border border-outline-variant rounded-[24px] p-8">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Weekly Clinic Health Check</h3>
+<p class="text-on-surface-variant font-body-sm">Tracking recovery and vaccination milestones across all active patients.</p>
+</div>
+<div class="flex gap-2">
+<div class="flex -space-x-2">
+<img alt="pet" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Small round dog avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7grhRkVCEDzoaGJ4edVXVWK-hMgIFEjQ61_S6M-b2ljINy4yc8FdrW2iFDzCXc8trMgA7W2jQ-QI8BGEPV6QmYos8sr8rKKugkp-YgSKjflKAEn7M0MDOqCSppRcqrL1LPp6_-w8wKksRtrHfRpgkruU0GELsV5qSSSvXdnvZrjXurMlacfSHjCD8j4D8eJk4O7-42BT5Xx7ebJ0RG3Cb9tzUVdHIIpOiThb7UZG1i8lPEu_fZhhsOAkjoMyKrDvE-v3hkHVJAsg7"/>
+<img alt="pet" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Small round dog avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBDn9Zh5Fjk1FTC5pvzGLsN2LQnBzmz0Ow9CqOeoDGGGoEKS1WKzUZYHw2E_ywkJ9kN57BYyzeV7GdzzDT9Vls9rDTjwbAIUdBmV19fKP99gWSuyfmglWsD7hHJBACZMgaV-Gg6CdZSwhxEsOMbUZptagutFo4b2NT6ALOKjhqKhpushdUW7a0DXJ_8HmkqiYBTONKOTcDX4No83QLi1Ur21CRAEDtZ2k57Mov5kh2Jz1G5dsyOFsf4WlSf8I9_56Cs27s7uoSL2pD"/>
+<img alt="pet" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Small round dog avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyJw90Ly6u8aikzCstb-_4CEZJGr45_OHngobAqyO-BZ_IdAYFS1vSQIkco4PPN_sT8KXc-lTbp5IMIFnSSeIyr8n0DVrLatrUzm8IKdGytenZhUCWJYbwXpN3DXHQUN2vc62SbCoDnP084iAbcv-o3whaaghLvwxgQeqidJ1jt5ZRNJ0Op0hUf_87NmQf8e_rQIC-jh3dLJXxNKANK4rCpw9WwK8yZVedAmPOF3Oy4BoCkNrZappCB0ptavkMsRzimhp_3P-NVNJj"/>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-[10px] font-bold text-on-surface-variant border-2 border-white">+121</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-body-sm">
+<span class="font-label-bold text-on-surface">Vaccination Compliance</span>
+<span class="text-primary font-bold">88%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000" style="width: 88%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-body-sm">
+<span class="font-label-bold text-on-surface">Surgery Recovery Success</span>
+<span class="text-secondary font-bold">96%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-1000" style="width: 96%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating Action Button for Mobile / Quick Action -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-full shadow-xl shadow-primary/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 lg:hidden">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>
