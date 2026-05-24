@@ -1,10 +1,10 @@
-# 🐾 Paws & Cross — Sistema de Gestión Veterinaria
+#  Paws & Cross — Sistema de Gestión Veterinaria
 
 Sistema web para la gestión de una clínica veterinaria canina. Permite administrar pacientes, expedientes médicos y citas. Desarrollado con Node.js y contenerizado con Docker.
 
 ---
 
-## 📋 Descripción de Usuario
+##  Descripción de Usuario
 
 ### ¿Qué es Paws & Cross?
 Paws & Cross es una aplicación web para veterinarias que permite al personal médico gestionar de forma sencilla toda la información de sus pacientes caninos.
@@ -13,10 +13,10 @@ Paws & Cross es una aplicación web para veterinarias que permite al personal m�
 
 | Sección | ¿Para qué sirve? |
 |---|---|
-| 🏠 **Dashboard** | Ver un resumen general: citas del día, pacientes activos, ingresos y acciones rápidas |
-| 🐕 **Patients** | Consultar el directorio completo de pacientes, buscar mascotas y agregar nuevas |
-| 📋 **Medical Records** | Ver el historial médico de cada paciente, diagnósticos, vacunas y tratamientos |
-| 📅 **Schedule** | Consultar y administrar la agenda de citas de la clínica |
+|  **Dashboard** | Ver un resumen general: citas del día, pacientes activos, ingresos y acciones rápidas |
+|  **Patients** | Consultar el directorio completo de pacientes, buscar mascotas y agregar nuevas |
+|  **Medical Records** | Ver el historial médico de cada paciente, diagnósticos, vacunas y tratamientos |
+|  **Schedule** | Consultar y administrar la agenda de citas de la clínica |
 
 ### ¿Cómo usar la aplicación?
 1. Abre tu navegador y entra a `http://localhost:3000`
@@ -26,7 +26,7 @@ Paws & Cross es una aplicación web para veterinarias que permite al personal m�
 
 ---
 
-## 🔧 Descripción Técnica
+##  Descripción Técnica
 
 ### Tecnologías utilizadas
 
@@ -65,7 +65,7 @@ paws-and-cross/
 
 ---
 
-## 🐳 Instalación y uso con Docker
+##  Instalación y uso con Docker
 
 ### Requisitos previos
 - Tener [Docker](https://www.docker.com/) instalado
@@ -100,7 +100,7 @@ docker stop $(docker ps -q --filter ancestor=paws-and-cross)
 
 ---
 
-## 💻 Instalación sin Docker (modo desarrollo)
+##  Instalación sin Docker (modo desarrollo)
 
 ### Requisitos previos
 - Node.js v18 o superior
@@ -124,6 +124,6 @@ Abre `http://localhost:3000` en tu navegador.
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
 Desarrollado como proyecto para la materia de **Programación Web 2**.
